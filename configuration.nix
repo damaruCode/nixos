@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -60,6 +60,7 @@
 
   programs.zsh.enable = true;
   programs.hyprland.enable = true;
+  programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 
   users.users.damaru = {
     isNormalUser = true;
