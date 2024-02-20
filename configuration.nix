@@ -3,7 +3,7 @@
 {
   imports =
     [ 
-      /etc/nixos/hardware-configuration.nix
+      ./hardware-configuration.nix
     ];
 
   nix.settings = {
@@ -55,9 +55,8 @@
      gh
      vim 
      wget
-     brave
-     kitty
      neofetch
+     home-manager
    ];
 
   programs.zsh.enable = true;
