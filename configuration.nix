@@ -1,10 +1,8 @@
 { config, lib, pkgs, ... }:
-
 {
-  imports =
-    [ 
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+  ];
 
   nix.settings = {
     experimental-features = "nix-command flakes";
@@ -51,13 +49,14 @@
   services.blueman.enable = true;
 
   environment.systemPackages = with pkgs; [
-     git
-     gh
-     vim 
-     wget
-     neofetch
-     home-manager
-   ];
+    git
+    gh
+    vim
+    wget
+    tree
+    neofetch
+    home-manager
+  ];
 
   programs.zsh.enable = true;
   programs.hyprland.enable = true;
