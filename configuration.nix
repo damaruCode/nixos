@@ -2,7 +2,11 @@
 {
   imports = [
     ./hardware-configuration.nix
+    ./features/nvidia.nix
+    ./features/steam.nix
   ];
+
+  nixpkgs.config.allowUnfree = true;
 
   nix.settings = {
     experimental-features = "nix-command flakes";
