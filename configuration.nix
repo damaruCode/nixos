@@ -61,6 +61,7 @@
   programs.zsh.enable = true;
   programs.hyprland.enable = true;
   programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
+  security.pam.services.swaylock = { };
 
   users.users.damaru = {
     isNormalUser = true;
