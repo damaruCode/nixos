@@ -49,11 +49,12 @@
   services.blueman.enable = true;
 
   environment.systemPackages = with pkgs; [
-    git
     gh
+    git
     vim
     wget
     tree
+    unzip
     neofetch
     home-manager
   ];
