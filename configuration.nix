@@ -1,9 +1,9 @@
 { inputs, pkgs, ... }:
 {
   imports = [
-    ./hardware-configuration.nix
     ./features/nvidia.nix
     ./features/steam.nix
+    ./hardware-configuration.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -59,6 +59,7 @@
     wget
     tree
     unzip
+    git-lfs   
     neofetch
     home-manager
   ];
