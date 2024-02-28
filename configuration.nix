@@ -57,9 +57,10 @@
     git
     vim
     wget
+    cups
     tree
     unzip
-    git-lfs   
+    git-lfs
     neofetch
     home-manager
   ];
