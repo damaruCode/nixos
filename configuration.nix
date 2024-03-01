@@ -3,10 +3,9 @@
   imports = [
     ./features/nvidia.nix
     ./features/steam.nix
+    ./features/kvm.nix
     ./hardware-configuration.nix
   ];
-
-  nixpkgs.config.allowUnfree = true;
 
   nix.settings = {
     experimental-features = "nix-command flakes";
@@ -52,6 +51,8 @@
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
+  nixpkgs.config.allowUnfree = true;
+
   environment.systemPackages = with pkgs; [
     gh
     git
@@ -72,7 +73,9 @@
 
   users.users.damaru = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "qemu-libvirtd" "libvirtd" 
+         "wheel" "video" "audio" "disk" "networkmanager" 
+       ];
   };
 
   users.defaultUserShell = pkgs.zsh;
