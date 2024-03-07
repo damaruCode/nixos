@@ -1,9 +1,9 @@
 { inputs, pkgs, ... }:
 {
   imports = [
-    ./features/nvidia.nix
+    # ./features/nvidia.nix
     ./features/steam.nix
-    ./features/kvm.nix
+    # ./features/vm.nix
     ./hardware-configuration.nix
   ];
 
@@ -73,9 +73,17 @@
 
   users.users.damaru = {
     isNormalUser = true;
-    extraGroups = [ "qemu-libvirtd" "libvirtd" 
-         "wheel" "video" "audio" "disk" "networkmanager" 
-       ];
+    extraGroups = [
+      "qemu-libvirtd"
+      "libvirtd"
+      "wheel"
+      "video"
+      "audio"
+      "disk"
+      "networkmanager"
+      "vboxusers"
+      "user-with-access-to-virtualbox"
+    ];
   };
 
   users.defaultUserShell = pkgs.zsh;

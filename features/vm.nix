@@ -1,5 +1,10 @@
 { pkgs, ... }:
 {
+  virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.guest.enable = true;
+
+  users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
+
   boot.kernelModules = [ "kvm-intel" ];
   programs.virt-manager.enable = true;
   virtualisation.libvirtd = {
