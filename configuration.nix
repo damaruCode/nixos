@@ -4,6 +4,7 @@
     # ./features/nvidia.nix
     ./features/steam.nix
     # ./features/vm.nix
+    ./features/via.nix
     ./hardware-configuration.nix
   ];
 
