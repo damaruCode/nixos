@@ -1,9 +1,9 @@
-{ inputs, pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   imports = [
     # ./features/nvidia.nix
-    ./features/steam.nix
     # ./features/vm.nix
+    ./features/steam.nix
     ./features/via.nix
     ./hardware-configuration.nix
   ];
@@ -25,6 +25,7 @@
   console = {
     useXkbConfig = true;
   };
+
   services.xserver.enable = false;
   services.xserver.layout = "us";
   services.xserver.xkbVariant = "altgr-intl";
