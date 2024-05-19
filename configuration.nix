@@ -1,10 +1,10 @@
 { pkgs, inputs, ... }:
 {
   imports = [
-    # ./features/nvidia.nix
+    ./features/nvidia.nix
     # ./features/vm.nix
     ./features/steam.nix
-    ./features/via.nix
+    # ./features/via.nix
     ./hardware-configuration.nix
   ];
 

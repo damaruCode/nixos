@@ -39,7 +39,8 @@
     prime = {
       # Enable synch.
       # offload.enable = true;
-      synch.enable = true;
+      # offload.enableOffloadCmd = true;
+      sync.enable = true;
 
       # Make sure to use the correct Bus ID values for your system!
       intelBusId = "PCI:0:2:0";
