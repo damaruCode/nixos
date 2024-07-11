@@ -2,8 +2,7 @@
   description = "damarus NixOS flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11";
-    hyprland.url = "github:hyprwm/Hyprland";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
   };
 
   outputs = { nixpkgs, ... }@inputs: {

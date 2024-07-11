@@ -1,10 +1,10 @@
 { pkgs, inputs, ... }:
 {
   imports = [
-    ./features/nvidia.nix
+    # ./features/nvidia.nix
     # ./features/vm.nix
-    ./features/steam.nix
-    # ./features/via.nix
+    # ./features/steam.nix
+    ./features/via.nix
     ./hardware-configuration.nix
   ];
 
@@ -27,8 +27,8 @@
   };
 
   services.xserver.enable = false;
-  services.xserver.layout = "us";
-  services.xserver.xkbVariant = "altgr-intl";
+  services.xserver.xkb.layout = "us";
+  services.xserver.xkb.variant = "altgr-intl";
 
   services.greetd = {
     enable = true;
@@ -70,21 +70,16 @@
 
   programs.zsh.enable = true;
   programs.hyprland.enable = true;
-  programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
   security.pam.services.swaylock = { };
 
   users.users.damaru = {
     isNormalUser = true;
     extraGroups = [
-      "qemu-libvirtd"
-      "libvirtd"
       "wheel"
       "video"
       "audio"
       "disk"
       "networkmanager"
-      "vboxusers"
-      "user-with-access-to-virtualbox"
     ];
   };
 
