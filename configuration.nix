@@ -1,9 +1,6 @@
-{ pkgs, inputs, ... }:
+{ pkgs,... }:
 {
   imports = [
-    # ./features/nvidia.nix
-    # ./features/vm.nix
-    # ./features/steam.nix
     ./features/via.nix
     ./hardware-configuration.nix
   ];
@@ -76,10 +73,6 @@
     isNormalUser = true;
     extraGroups = [
       "wheel"
-      "video"
-      "audio"
-      "disk"
-      "networkmanager"
     ];
   };
 
