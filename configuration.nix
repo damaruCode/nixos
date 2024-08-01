@@ -53,6 +53,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
+    nh
     gh
     git
     vim
@@ -67,6 +68,7 @@
 
   programs.zsh.enable = true;
   programs.hyprland.enable = true;
+  programs.hyprlock.enable = true;
   security.pam.services.swaylock = { };
 
   users.users.damaru = {
