@@ -1,8 +1,8 @@
 { pkgs,... }:
 {
   imports = [
-    ./features/nh.nix
-    ./features/via.nix
+    ./features/nix-helpers.nix
+    ./features/via-rules.nix
     ./hardware-configuration.nix
   ];
 
