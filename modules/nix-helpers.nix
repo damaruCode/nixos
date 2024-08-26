@@ -1,6 +1,5 @@
 { pkgs, lib, config, ... }:
 {
-
   options = {
       nix-helpers.enable = lib.mkEnableOption "enables nix-helpers";
   };

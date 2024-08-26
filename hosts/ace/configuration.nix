@@ -5,6 +5,7 @@
   ];
 
   # custom module options
+  greetd.enable = true;
   nix-helpers.enable = true;
   via-rules.enable = true;
 
@@ -29,14 +30,6 @@
   services.xserver.enable = false;
   services.xserver.xkb.layout = "us";
   services.xserver.xkb.variant = "altgr-intl";
-
-  services.greetd = {
-    enable = true;
-    vt = 2;
-    settings.default_session = {
-      command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --asterisks --cmd Hyprland";
-    };
-  };
 
   services.printing.enable = true;
 
