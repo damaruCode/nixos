@@ -6,11 +6,12 @@
   };
 
   outputs = { nixpkgs, ... }@inputs: {
-    nixosConfigurations.damaruNixOS = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.ace = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       system = "x86_64-linux";
       modules = [
-        ./configuration.nix
+        ./hosts/ace/configuration.nix
+        ./modules
       ];
     };
   };

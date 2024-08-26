@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, config, ... }:
 let
   via-rules = pkgs.writeTextFile {
     name = "99-via.rules";
@@ -9,5 +9,11 @@ let
   };
 in
 {
-  services.udev.packages = [ via-rules ];
+  options = {
+      via-rules.enable = lib.mkEnableOption "enables udev rules for via";
+  };
+  
+  config = lib.mkIf config.via-rules.enable {
+    services.udev.packages = [ via-rules ];
+  };
 }

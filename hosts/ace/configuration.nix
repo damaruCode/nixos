@@ -1,10 +1,12 @@
 { pkgs,... }:
 {
   imports = [
-    ./features/nix-helpers.nix
-    ./features/via-rules.nix
     ./hardware-configuration.nix
   ];
+
+  # custom module options
+  nix-helpers.enable = true;
+  via-rules.enable = true;
 
   nix.settings = {
     experimental-features = "nix-command flakes";
@@ -14,7 +16,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "damaruNixOS";
+  networking.hostName = "ace";
   networking.networkmanager.enable = true;
 
   time.timeZone = "Europe/Berlin";
