@@ -65,8 +65,6 @@
   programs.hyprland.enable = true;
   programs.hyprlock.enable = true;
 
-  security.pam.services.swaylock = { };
-
   users.users.damaru = {
     isNormalUser = true;
     extraGroups = [
