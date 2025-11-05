@@ -52,6 +52,7 @@
     gh
     git
     vim
+    zip
     wget
     cups
     tree
