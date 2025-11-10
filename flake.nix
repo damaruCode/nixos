@@ -19,8 +19,8 @@
           ./modules
         ];
       };
-	
-    nixosConfigurations.tuf = nixpkgs.lib.nixosSystem {
+
+      nixosConfigurations.tuf = nixpkgs.lib.nixosSystem {
         specialArgs = {
           inherit inputs;
         };
@@ -31,7 +31,7 @@
             system.stateVersion = "25.05";
             wsl.enable = true;
           }
-	  ./hosts/tuf/configuration.nix
+          ./hosts/tuf/configuration.nix
           ./modules
         ];
       };

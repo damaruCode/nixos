@@ -1,30 +1,28 @@
 { pkgs, ... }:
-{	
-
-# custom module options
+{
+  # custom module options
   greetd.enable = true;
   nix-helpers.enable = true;
 
- nix.settings = {
+  nix.settings = {
     experimental-features = "nix-command flakes";
     auto-optimise-store = true;
   };
 
- time.timeZone = "Europe/Berlin";
+  time.timeZone = "Europe/Berlin";
 
   i18n.defaultLocale = "en_US.UTF-8";
   console = {
     useXkbConfig = true;
   };
 
-services.xserver.enable = false;
+  services.xserver.enable = false;
   services.xserver.xkb.layout = "us";
   services.xserver.xkb.variant = "altgr-intl";
 
-
   nixpkgs.config.allowUnfree = true;
 
- environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     gh
     git
     vim
@@ -38,9 +36,9 @@ services.xserver.enable = false;
     home-manager
   ];
 
-programs.zsh.enable = true;
+  programs.zsh.enable = true;
 
-users.users.damaru = {
+  users.users.damaru = {
     isNormalUser = true;
     extraGroups = [
       "wheel"
