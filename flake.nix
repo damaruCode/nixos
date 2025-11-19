@@ -4,10 +4,11 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
+    nixvim.url = "github:damaruCode/nixvim";
   };
 
   outputs =
-    { nixpkgs, nixos-wsl, ... }@inputs:
+    { nixpkgs, nixos-wsl, nixvim, ... }@inputs:
     {
       nixosConfigurations.ace = nixpkgs.lib.nixosSystem {
         specialArgs = {

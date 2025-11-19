@@ -1,7 +1,6 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 {
   # custom module options
-  greetd.enable = true;
   nix-helpers.enable = true;
 
   nix.settings = {
@@ -33,12 +32,15 @@
     unzip
     git-lfs
     neofetch
-    home-manager
+
+    nerd-fonts.caskaydia-cove
+
+    inputs.nixvim.packages.x86_64-linux.default
   ];
 
   programs.zsh.enable = true;
 
-  users.users.damaru = {
+  users.users.nixos = {
     isNormalUser = true;
     extraGroups = [
       "wheel"
