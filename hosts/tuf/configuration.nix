@@ -34,12 +34,8 @@
     git-lfs
     neofetch
 
-    nerd-fonts.caskaydia-cove
-
     inputs.nixvim.packages.x86_64-linux.default
   ];
-
-  programs.zsh.enable = true;
 
   users.users.nixos = {
     isNormalUser = true;

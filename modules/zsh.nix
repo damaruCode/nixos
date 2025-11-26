@@ -21,7 +21,7 @@
         alias cwd='cd "$(cat ~/.cwd)"'
         cwd
       '';
-      oh-my-zsh = {
+      ohMyZsh = {
         enable = true;
         plugins = [
           "git"
