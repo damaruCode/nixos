@@ -8,7 +8,12 @@
   };
 
   outputs =
-    { nixpkgs, nixos-wsl, nixvim, ... }@inputs:
+    {
+      nixpkgs,
+      nixos-wsl,
+      nixvim,
+      ...
+    }@inputs:
     {
       nixosConfigurations.ace = nixpkgs.lib.nixosSystem {
         specialArgs = {
