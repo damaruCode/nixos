@@ -2,7 +2,7 @@
   description = "damarus NixOS flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
     nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
     nixvim.url = "github:damaruCode/nixvim";
   };

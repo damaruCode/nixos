@@ -5,6 +5,7 @@
   ];
 
   # custom module options
+  docker.enable = true;
   greetd.enable = true;
   nix-helpers.enable = true;
   via-rules.enable = true;
@@ -33,7 +34,6 @@
 
   services.printing.enable = true;
 
-  sound.enable = true;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -69,6 +69,7 @@
   users.users.damaru = {
     isNormalUser = true;
     extraGroups = [
+      "docker"
       "wheel"
     ];
   };
