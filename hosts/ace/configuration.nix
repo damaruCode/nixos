@@ -6,9 +6,9 @@
 
   # custom module options
   docker.enable = true;
-  greetd.enable = true;
+  # greetd.enable = true;
   nix-helpers.enable = true;
-  via-rules.enable = true;
+  # via-rules.enable = true;
 
   nix.settings = {
     experimental-features = "nix-command flakes";
