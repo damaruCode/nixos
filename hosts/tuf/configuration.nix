@@ -2,6 +2,7 @@
 {
   # custom module options
   docker.enable = true;
+  nix-direnv.enable = true;
   nix-helpers.enable = true;
   zsh.enable = true;
 
@@ -36,6 +37,7 @@
     zathura
     obsidian
     neofetch
+    claude-code
 
     inputs.nixvim.packages.x86_64-linux.default
   ];
