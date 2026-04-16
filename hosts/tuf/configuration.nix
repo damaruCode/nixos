@@ -1,6 +1,7 @@
 { pkgs, inputs, ... }:
 {
   # custom module options
+  docker.enable = true;
   nix-helpers.enable = true;
   zsh.enable = true;
 
@@ -32,6 +33,8 @@
     tree
     unzip
     git-lfs
+    zathura
+    obsidian
     neofetch
 
     inputs.nixvim.packages.x86_64-linux.default
@@ -40,6 +43,7 @@
   users.users.nixos = {
     isNormalUser = true;
     extraGroups = [
+      "docker"
       "wheel"
     ];
   };
