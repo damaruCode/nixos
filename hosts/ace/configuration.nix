@@ -5,7 +5,7 @@
   ];
 
   # custom module options
-  docker.enable = true;
+  # docker.enable = true;
   # greetd.enable = true;
   nix-direnv.enable = true;
   nix-helpers.enable = true;
