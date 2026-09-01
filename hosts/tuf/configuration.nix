@@ -41,7 +41,7 @@
     inputs.nixvim.packages.x86_64-linux.default
   ];
 
-  users.users.damaru = {
+  users.users.nixos = {
     isNormalUser = true;
     extraGroups = [
       "docker"
