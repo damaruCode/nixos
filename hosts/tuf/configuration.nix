@@ -36,13 +36,12 @@
     git-lfs
     zathura
     obsidian
-    neofetch
     claude-code
 
     inputs.nixvim.packages.x86_64-linux.default
   ];
 
-  users.users.nixos = {
+  users.users.damaru = {
     isNormalUser = true;
     extraGroups = [
       "docker"
